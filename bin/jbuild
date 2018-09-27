@@ -1,5 +1,0 @@
-(executable
- ((name sedi)
-  (public_name sedi)
-  (preprocess (pps (lwt_ppx ppx_compose)))
-  (libraries (cmdliner fmt logs logs.lwt logs.fmt lwt lwt.unix))))
