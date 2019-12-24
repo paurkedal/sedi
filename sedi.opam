@@ -8,11 +8,11 @@ bug-reports: "https://github.com/paurkedal/sedi/issues"
 depends: [
   "ocaml"
   "cmdliner"
+  "dune" {>= "1.3"}
   "fmt"
   "logs"
   "lwt"
   "lwt_ppx"
-  "jbuilder" {build}
   "ppx_compose"
 ]
 build: [
@@ -20,3 +20,9 @@ build: [
   ["jbuilder" "runtest" "-p" name "-j" jobs] {with-test}
 ]
 dev-repo: "git+https://github.com/paurkedal/sedi.git"
+synopsis: "An interactive wrapper to sed -i"
+description: """
+This provides a single command `sedi`, which works very much like `sed -i`
+except that it shows differences and asks for confirmation before changing
+any files.
+"""
